@@ -1,0 +1,88 @@
+<div class="item">
+    <div>Nome Completo</div>
+        <div class="input">
+            <input 
+            type="text" 
+            name="name" 
+            value="{{user.name}}"
+            placeholder="Digite o seu nome completo"
+            >
+     </div>
+ </div>
+
+ <div class="item">
+    <div>Email</div>
+        <div class="input">
+            <input 
+            type="email" 
+            name="email" 
+            value="{{user.email}}"
+            onblur="Validate.apply(this,'isEmail')"
+            placeholder="Digite o seu email"
+            >
+     </div>
+ </div>
+
+ <div class="item">
+    <div>Senha</div>
+        <div class="input">
+            <input 
+            type="password" 
+            name="password" 
+            placeholder="Escolha uma senha segura"
+            >
+     </div>
+ </div>
+
+ {% if not user.id %}
+ <div class="item">
+    <div> Repetir Senha</div>
+        <div class="input">
+            <input 
+            type="password" 
+            name="passwordRepeat" 
+            placeholder="Repita a senha escolhida"
+            >
+     </div>
+ </div>
+ {% endif %}
+
+ <div class="item">
+    <div>CPF ou CNPJ</div>
+        <div class="input">
+            <input 
+            type="text" 
+            name="cpf_cnpj" 
+            value="{{user.cpf_cnpj}}"
+            onkeydown="Mask.apply(this,'cpfCnpj')"
+            onblur="Validate.apply(this,'isCpfCnpj')"
+            placeholder="Digite o seu documento."
+            >
+     </div>
+ </div>
+
+ <div class="item">
+    <div>CEP</div>
+        <div class="input">
+            <input 
+            type="text" 
+            name="cep" 
+            value="{{user.cep}}"
+            onkeydown="Mask.apply(this,'cep')"
+            onblur="Validate.apply(this,'isCep')"
+            placeholder="99999-999"
+            >
+     </div>
+ </div>
+
+ <div class="item">
+    <div>Endereço Completo</div>
+        <div class="input">
+            <input 
+            type="text" 
+            name="address" 
+            value="{{user.address}}"
+            placeholder="Digite o seu endereço completo"
+            >
+     </div>
+ </div>
